@@ -1,0 +1,42 @@
+Program to check whether a number is a Harshad number or not (Niven number) is discussed here. Harshad Number is an integer that is divisible by the sum of its digits.
+ Input format:
+
+Input consists of 1 integer.
+If the given number is Harshad Number display Harshad Number or display Not Harshad Number.
+Sample Input:
+
+1729
+
+ Sample Output:
+
+Harshad Number
+code:
+
+
+import java.util.Scanner;
+public class Harshard
+{
+    public static void main(String[] args)
+    {
+        //Write your code
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int temp=n;
+        int sum=0,d;
+        while(n>0)
+        {
+        d=n%10;
+        
+        n=n/10;
+        sum=sum+d;
+        }
+        
+        if(temp%sum==0)
+        System.out.println("Harshad Number");
+        else
+        System.out.println("Not Harshad Number");
+        
+    }
+}
+
+
